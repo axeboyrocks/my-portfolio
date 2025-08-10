@@ -7,11 +7,12 @@ import Projects from "./components/Projects";
 import Timeline from "./components/Timeline";
 import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
+import DamanAI from "./components/Daman-ai";
 
 export default function Portfolio() {
   const { scrollYProgress } = useScroll();
 
-  const switchScale = useTransform(scrollYProgress, [0.0, 0.4], [1, 2]);
+  const switchScale = useTransform(scrollYProgress, [0.0, 0.4], [1, 5]);
   const switchOpacity = useTransform(scrollYProgress, [0.0, 0.4], [1, 0]);
 
   useEffect(() => {
@@ -24,7 +25,6 @@ export default function Portfolio() {
 
       {/* Image 1 - Network Switch with scroll effect */}
       <section className="min-h-[40vh] flex flex-col justify-center items-center relative space-y-6">
-
         <motion.div
           className="relative flex justify-center items-center w-full"
           style={{ scale: switchScale, opacity: switchOpacity }}
@@ -55,6 +55,11 @@ export default function Portfolio() {
 
       {/* Spacer before Tech Stack to push it lower */}
       <div className="min-h-[30vh]" />
+
+      {/* Daman AI section */}
+      <section className="py-20 px-6 md:px-24">
+        <DamanAI />
+      </section>
 
       <TechStack />
       <Projects />
