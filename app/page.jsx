@@ -68,7 +68,7 @@ export default function Portfolio() {
       <Contact />
 
       <footer className="py-10 text-center text-sm text-neutral-500">
-        © 2025 Damanpreet Chauhan. Built with ❤️ and Framer Motion.
+        © 2025 Damanpreet Chauhan. Built with ❤️, Node.js and Framer Motion.
       </footer>
     </main>
   );
