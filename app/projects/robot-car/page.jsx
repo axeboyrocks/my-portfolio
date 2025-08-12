@@ -46,10 +46,7 @@ export default function RobotCarProject() {
                     dragSensitivity={6}            // smaller = more sensitive
                     showControls={true}
                 />
-                <p className="text-sm text-neutral-500 mt-3">
-                    Place 11 images at <code>/public/images/projects/robot-360/</code> named
-                    <code> robot-360-01.png</code> … <code>robot-360-11.png</code>.
-                </p>
+
             </section>
 
             {/* Content Grid */}
