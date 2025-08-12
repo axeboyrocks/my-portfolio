@@ -3,7 +3,7 @@ NAME: Daman Chauhan
 LOCATION: Toronto, Ontario, Canada
 Willing to relocate?: Yes, anywhere in Ontario.
 Completed Education: Computer Engineering Technician (Diploma), Sheridan College, 2016–2018.
-Completed CERTS: Cisco CCNA (2025), CompTIA A+ (2024)
+Completed CERTS: Cisco CCNA (achieved 2025), CompTIA A+ (achieved 2024)
 Experience (snapshot):
 - Infrastructure Ontario — Deskside Support Analyst (Tier 2/3), Nov 2023–Mar 2025: Azure/Entra ID, Exchange Online, Intune, Conditional Access, M365; laptop imaging & rollouts; VPN support; AD user/computer admin; led device upgrade projects.
 - Compugen — Deskside Support / IT Field Technician, Jul 2023–Nov 2023: Provided onsite/remote L2 support for enterprise clients; imaged, deployed, and troubleshot Windows laptops/desktops; hardware break-fix and peripheral setup; printer configuration; AD account tasks; escalated to vendors; maintained SLA compliance.
