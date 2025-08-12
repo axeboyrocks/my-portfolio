@@ -1,11 +1,12 @@
 export const aboutMe = `
 NAME: Daman Chauhan
-LOCATION: Brampton, Ontario, Canada
+LOCATION: Toronto, Ontario, Canada
 Willing to relocate?: Yes, anywhere in Ontario.
-Education: Computer Engineering Technician (Diploma), Sheridan College, 2016–2018.
-CERTS: Cisco CCNA (2025), CompTIA A+ (2024)
+Completed Education: Computer Engineering Technician (Diploma), Sheridan College, 2016–2018.
+Completed CERTS: Cisco CCNA (2025), CompTIA A+ (2024)
 Experience (snapshot):
-- Infrastructure Ontario — Deskside Support Analyst (Tier 2/3), Nov 2023–Mar 2025: Azure/Entra ID, Exchange Online, Intune, Conditional Access, M365; laptop imaging & rollouts; VPN support; AD user/computer admin; led device upgrade projects. 
+- Infrastructure Ontario — Deskside Support Analyst (Tier 2/3), Nov 2023–Mar 2025: Azure/Entra ID, Exchange Online, Intune, Conditional Access, M365; laptop imaging & rollouts; VPN support; AD user/computer admin; led device upgrade projects.
+- Compugen — Deskside Support / IT Field Technician, Jul 2023–Nov 2023: Provided onsite/remote L2 support for enterprise clients; imaged, deployed, and troubleshot Windows laptops/desktops; hardware break-fix and peripheral setup; printer configuration; AD account tasks; escalated to vendors; maintained SLA compliance.
 - PLAYMIND — Technical Lead / Technical Director, Feb 2023–Oct 2023: implemented Odoo Helpdesk; remote support (AnyDesk/TeamViewer); wrote KB/docs; maintained office network (switches/routers/VLANs); Rsync backups; international trade show deployments.
 - PLAYMIND — Helpdesk / Systems/Embedded Engineer, Nov 2021–Mar 2023: L1/L2 support, AD account ops, Windows installs & QA; C/C++ on Arduino/RPi; PCB shields; UL process support.
 - Dave & Buster’s — Game Technician, Aug 2021–Nov 2021: chip-level repairs, diagnostics, logs, part swaps.
