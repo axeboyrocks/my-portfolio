@@ -22,7 +22,14 @@ export default function NetworkingLabProject() {
 
             {/* Hero */}
             <section className="px-6 md:px-24 py-10">
-                <h1 className="text-4xl md:text-5xl font-bold">Networking Lab</h1>
+                <h1 className="text-4xl md:text-5xl font-bold flex items-center gap-2">
+                    Networking Lab
+                    <span className="bg-yellow-400 text-black text-sm px-2 py-1 rounded-full">
+                        In Progress
+                    </span>
+                </h1>
+
+
                 <p className="mt-3 text-neutral-300 max-w-3xl">
                     Labs and configurations will be published here soon—once the Packet Tracer
                     topologies and the physical rack build Daman is working on are fully

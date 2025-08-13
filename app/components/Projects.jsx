@@ -24,7 +24,13 @@ export default function Projects() {
                 <Link href="/projects/networking-lab" aria-label="View Networking Lab project">
                     <Card className={`${baseCard} cursor-pointer hover:bg-neutral-800`}>
                         <CardContent className="p-6">
-                            <h3 className="text-2xl font-medium mb-2">Networking Lab</h3>
+                            <h3 className="text-2xl font-medium mb-2 flex items-center gap-2">
+                                Networking Lab
+                                <span className="bg-yellow-400 text-black text-xs px-2 py-0.5 rounded-full">
+                                    In Progress
+                                </span>
+                            </h3>
+
                             <p>Home lab with VLANs, OSPF, HSRP, DHCP, and monitoring—configs and diagrams.</p>
                         </CardContent>
                     </Card>

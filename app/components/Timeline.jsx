@@ -13,7 +13,7 @@ export default function Timeline() {
 
                 {/* 2025 — Infrastructure Ontario (dates updated) */}
                 <div>
-                    <h3 className="text-2xl font-semibold">Jan 2025 – Mar 2025</h3>
+                    <h3 className="text-2xl font-semibold">May 2024 – Mar 2025</h3>
                     <p className="text-neutral-400">Infrastructure Ontario — Deskside Support Analyst (L2/L3), Toronto, ON</p>
                     <p className="text-neutral-200 mt-2">
                         L2/L3 deskside support for large government enterprise across Windows/M365, handling Intune/Entra policies, Exchange issues,

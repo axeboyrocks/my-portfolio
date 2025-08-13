@@ -1,6 +1,7 @@
 // app/projects/robot-car/page.jsx
 import Link from "next/link";
 import ThreeSixtyViewer from "../../components/ThreeSixtyViewer";
+import GalleryLightbox from "../../components/GalleryLightbox";
 
 export const metadata = {
     title: "Robot Car | Damanpreet Chauhan",
@@ -9,14 +10,19 @@ export const metadata = {
 };
 
 export default function RobotCarProject() {
+    // You can tune `focus` to keep the car centered in the crop for each photo.
+    // Format: "X% Y%" where 50% 50% is center. Increase Y% to bias lower, decrease to bias upper.
+    const galleryImages = [
+        { src: "/images/projects/car_up.jpeg", alt: "Robot car - top view", focus: "45% 80%" }, // car slightly lower-left
+        { src: "/images/projects/car_bottom.jpeg", alt: "Robot car - bottom view", focus: "50% 95%" }, // roughly centered
+        { src: "/images/projects/car_front.jpeg", alt: "Robot car - front view", focus: "50% 88%" }, // bias lower a bit
+    ];
+
     return (
         <main className="bg-black text-white min-h-screen">
             {/* Top bar / breadcrumb */}
             <div className="px-6 md:px-24 py-6 border-b border-neutral-800">
-                <Link
-                    href="/#projects"
-                    className="text-sm text-neutral-400 hover:text-white transition"
-                >
+                <Link href="/#projects" className="text-sm text-neutral-400 hover:text-white transition">
                     ← Back to Projects
                 </Link>
             </div>
@@ -39,14 +45,13 @@ export default function RobotCarProject() {
                     baseName="robot-360"
                     ext="png"
                     frameCount={11}
-                    widthClass="w-1/2"         // now 50% width instead of full width
-                    aspectClass="aspect-[16/10]"   // adjust to your images
-                    autoPlay={true}                // set to false to start paused
-                    autoSpeed={900}                // ms per frame
-                    dragSensitivity={6}            // smaller = more sensitive
+                    widthClass="w-1/2"
+                    aspectClass="aspect-[16/10]"
+                    autoPlay={true}
+                    autoSpeed={900}
+                    dragSensitivity={6}
                     showControls={true}
                 />
-
             </section>
 
             {/* Content Grid */}
@@ -76,22 +81,8 @@ export default function RobotCarProject() {
                     {/* Gallery */}
                     <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
                         <h3 className="text-xl font-semibold mb-2">Gallery</h3>
-                        <div className="grid sm:grid-cols-2 gap-4">
-                            {/* Replace with your images */}
-                            <img
-                                src="/images/projects/robot-car-1.jpg"
-                                alt="Robot car build 1"
-                                className="rounded-xl object-cover w-full h-full"
-                            />
-                            <img
-                                src="/images/projects/robot-car-2.jpg"
-                                alt="Robot car build 2"
-                                className="rounded-xl object-cover w-full h-full"
-                            />
-                        </div>
-                        <p className="text-sm text-neutral-500 mt-3">
-                            Put images in <code>/public/images/projects/</code> and update the paths above.
-                        </p>
+                        <GalleryLightbox images={galleryImages} />
+
                     </div>
                 </div>
 
@@ -104,36 +95,20 @@ export default function RobotCarProject() {
                             <li>Ultrasonic + IR sensors</li>
                             <li>DC motors + H‑bridge</li>
                             <li>Custom PCB shield</li>
-                            <li>Power regulation (buck)</li>
+                            <li>Power regulation (AAA Batteries)</li>
                         </ul>
                     </div>
 
                     <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
                         <h3 className="text-xl font-semibold mb-2">Role & Scope</h3>
-                        <p className="text-neutral-300">
-                            Solo project: circuit design, firmware, assembly, and testing.
-                        </p>
+                        <p className="text-neutral-300">Solo project: circuit design, firmware, assembly, and testing.</p>
                     </div>
 
                     <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
                         <h3 className="text-xl font-semibold mb-2">Links</h3>
                         <ul className="space-y-2">
-                            <li>
-                                <a
-                                    href="#"
-                                    className="text-blue-400 hover:text-blue-300 transition"
-                                >
-                                    GitHub Repository
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="text-blue-400 hover:text-blue-300 transition"
-                                >
-                                    Demo Video
-                                </a>
-                            </li>
+                            <li><a href="#" className="text-blue-400 hover:text-blue-300 transition">GitHub Repository</a></li>
+                            <li><a href="#" className="text-blue-400 hover:text-blue-300 transition">Demo Video</a></li>
                         </ul>
                     </div>
                 </aside>
@@ -141,10 +116,7 @@ export default function RobotCarProject() {
 
             {/* Footer Back Link */}
             <div className="px-6 md:px-24 pb-12">
-                <Link
-                    href="/#projects"
-                    className="text-sm text-neutral-400 hover:text-white transition"
-                >
+                <Link href="/#projects" className="text-sm text-neutral-400 hover:text-white transition">
                     ← Back to Projects
                 </Link>
             </div>
