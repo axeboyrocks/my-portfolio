@@ -10,7 +10,17 @@ export default function Projects() {
             <h2 className="text-4xl font-semibold mb-12 text-center">Projects</h2>
 
             <div className="grid md:grid-cols-2 gap-8">
-                {/* 1) Robot Car (clickable) */}
+                {/* 1) Portfolio Website (clickable) */}
+                <Link href="/projects/portfolio-website" aria-label="View Portfolio Website project">
+                    <Card className={`${baseCard} cursor-pointer hover:bg-neutral-800`}>
+                        <CardContent className="p-6">
+                            <h3 className="text-2xl font-medium mb-2">Portfolio Website</h3>
+                            <p>Next.js, Tailwind CSS, and Framer Motion powering this site.</p>
+                        </CardContent>
+                    </Card>
+                </Link>
+
+                {/* 2) Robot Car (clickable) */}
                 <Link href="/projects/robot-car" aria-label="View Robot Car project">
                     <Card className={`${baseCard} cursor-pointer hover:bg-neutral-800`}>
                         <CardContent className="p-6">
@@ -20,7 +30,7 @@ export default function Projects() {
                     </Card>
                 </Link>
 
-                {/* 2) Networking Lab (clickable) */}
+                {/* 3) Networking Lab (clickable) */}
                 <Link href="/projects/networking-lab" aria-label="View Networking Lab project">
                     <Card className={`${baseCard} cursor-pointer hover:bg-neutral-800`}>
                         <CardContent className="p-6">
@@ -36,7 +46,7 @@ export default function Projects() {
                     </Card>
                 </Link>
 
-                {/* 3) Enterprise Wi‑Fi Design (coming soon, disabled) */}
+                {/* 4) Enterprise Wi‑Fi Design (coming soon, disabled) */}
                 <div aria-disabled className="opacity-70 cursor-not-allowed">
                     <Card className={baseCard}>
                         <CardContent className="p-6">
@@ -53,7 +63,7 @@ export default function Projects() {
                     </Card>
                 </div>
 
-                {/* 4) Intune Automation (coming soon, disabled) */}
+                {/* 5) Intune Automation (coming soon, disabled) */}
                 <div aria-disabled className="opacity-70 cursor-not-allowed">
                     <Card className={baseCard}>
                         <CardContent className="p-6">
