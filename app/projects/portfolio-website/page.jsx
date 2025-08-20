@@ -18,9 +18,9 @@ export default function PortfolioWebsiteProject() {
 
             {/* Hero */}
             <section className="px-6 md:px-24 py-10">
-                <h1 className="text-4xl md:text-5xl font-bold">Portfolio Website</h1>
+                <h1 className="text-4xl md:text-5xl font-bold">Daman's Portfolio Website</h1>
                 <p className="mt-3 text-neutral-300 max-w-3xl">
-                    This site is built with Next.js 15, Tailwind CSS, and Framer Motion to showcase my
+                    This website is built with Next.js 15, Tailwind CSS, and Framer Motion to showcase my
                     work with smooth animations, responsive design, and fast navigation using the App
                     Router.
                 </p>
@@ -45,9 +45,9 @@ export default function PortfolioWebsiteProject() {
                         <ul className="list-disc list-inside space-y-2 text-neutral-300">
                             <li>App Router pages for projects, timeline, and certifications</li>
                             <li>Reusable React components styled with Tailwind CSS</li>
-                            <li>Framer Motion transitions for hero, cards, and modals</li>
-                            <li>Contact form using Resend for server-side email delivery</li>
-                            <li>Interactive widgets like a 360° viewer and gallery lightbox</li>
+                            <li>Framer Motion transitions for Introduction typing effect, cards, and models</li>
+                            <li>Contact form using Resend's API for server-side email delivery</li>
+                            <li>Interactive widgets like a 360° viewer</li>
                         </ul>
                     </div>
 
@@ -55,7 +55,7 @@ export default function PortfolioWebsiteProject() {
                         <h3 className="text-xl font-semibold mb-2">Deployment</h3>
                         <p className="text-neutral-300">
                             The site is deployed on Vercel with CI/CD from GitHub. Each push builds
-                            and optimizes the app, serving static assets from the edge for quick
+                            and optimizes the website, serving static assets from the edge for quick
                             global access.
                         </p>
                     </div>
@@ -70,7 +70,8 @@ export default function PortfolioWebsiteProject() {
                             <li>React 19</li>
                             <li>Tailwind CSS 4</li>
                             <li>Framer Motion</li>
-                            <li>Resend (contact form)</li>
+                            <li>Resend API (contact form)</li>
+                            <li>Groq AI API </li>
                             <li>Vercel hosting</li>
                         </ul>
                     </div>
@@ -80,7 +81,7 @@ export default function PortfolioWebsiteProject() {
                         <ul className="space-y-2">
                             <li>
                                 <a
-                                    href="https://github.com/damanpreet-NS/my-portfolio"
+                                    href="https://github.com/axeboyrocks/my-portfolio"
                                     className="text-blue-400 hover:text-blue-300 transition"
                                 >
                                     Source on GitHub
@@ -88,7 +89,7 @@ export default function PortfolioWebsiteProject() {
                             </li>
                             <li>
                                 <a
-                                    href="https://daman-portfolio.vercel.app"
+                                    href="https://damantech.vercel.app"
                                     className="text-blue-400 hover:text-blue-300 transition"
                                 >
                                     Live Site
@@ -99,7 +100,7 @@ export default function PortfolioWebsiteProject() {
 
                     <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
                         <h3 className="text-xl font-semibold mb-2">Role & Scope</h3>
-                        <p className="text-neutral-300">Solo project: design, development, and deployment.</p>
+                        <p className="text-neutral-300">Solo project: Website design, Working with APIs, development, preview and deployment.</p>
                     </div>
                 </aside>
             </section>

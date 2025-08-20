@@ -18,7 +18,7 @@ export default function Projects() {
                 >
                     <Card className={`${baseCard} cursor-pointer hover:bg-neutral-800`}>
                         <CardContent className="p-6">
-                            <h3 className="text-2xl font-medium mb-2">Portfolio Website</h3>
+                            <h3 className="text-2xl font-medium mb-2">Portfolio Website (This Website)</h3>
                             <p>Next.js, Tailwind CSS, and Framer Motion powering this site.</p>
                         </CardContent>
                     </Card>

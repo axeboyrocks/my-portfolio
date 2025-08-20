@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 export default function Hero() {
     const LINES = [
-        "Hello, I'm Damanpreet Chauhan",
+        "Hello, I'm Daman Chauhan",
         "I build, support, and secure modern IT infrastructure",
-        "CCNA | Azure | Intune | M365 | Cisco | PowerShell",
+        "Cisco CCNA | Azure | Intune | M365 | GSuite | Comptia A+ | PowerShell",
     ];
 
     const TYPE_SPEED = 40;   // ms per character
@@ -73,7 +73,7 @@ export default function Hero() {
                 {/* Line 3 */}
                 <p>
                     &gt; {typed[2]}
-                    {/* When all done, keep a faint cursor at the end for terminal feel */}
+                    {/* When all done, cursor should faint */}
                     {done ? <Cursor faint /> : stage === 2 && <Cursor />}
                 </p>
             </div>
