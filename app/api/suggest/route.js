@@ -37,7 +37,7 @@ export async function POST(req) {
         // - While testing, keep onboarding@resend.dev and TO = your own Resend account email.
         // - After verifying a domain in Resend, set RESEND_FROM + CONTACT_TO_EMAIL in your env and restart.
         const FROM =
-            process.env.RESEND_FROM || "Network Lab Page Portfolio <onboarding@resend.dev>";
+            process.env.RESEND_FROM || "Portfolio Message <onboarding@resend.dev>";
         const TO = process.env.CONTACT_TO_EMAIL || "damanpreet.nov@gmail.com";
 
         const resend = new Resend(apiKey);
@@ -46,7 +46,7 @@ export async function POST(req) {
             from: FROM,
             to: [TO],
             reply_to: email || undefined,
-            subject: subject || `Message came from NL page from ${name || "Visitor"}`,
+            subject: subject || `Lab Suggestion from ${name || "Visitor"}`,
             html: `
         <div>
           <p><strong>Name:</strong> ${name || "Anonymous"}</p>

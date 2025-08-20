@@ -107,7 +107,7 @@ export default function RobotCarProject() {
                     <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
                         <h3 className="text-xl font-semibold mb-2">Links</h3>
                         <ul className="space-y-2">
-                            <li><a href="#" className="text-blue-400 hover:text-blue-300 transition">GitHub Repository</a></li>
+                            <li><a href="https://github.com/axeboyrocks/Robot_Car" className="text-blue-400 hover:text-blue-300 transition">GitHub Repository</a></li>
                             <li><a href="#" className="text-blue-400 hover:text-blue-300 transition">Demo Video</a></li>
                         </ul>
                     </div>
