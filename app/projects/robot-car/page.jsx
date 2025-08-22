@@ -78,6 +78,24 @@ export default function RobotCarProject() {
                         </ul>
                     </div>
 
+                    <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
+                        <h3 className="text-xl font-semibold mb-2">Demo Video</h3>
+                        <div className="aspect-video w-full">
+                            <iframe
+                                className="w-full h-full rounded-lg"
+                                src="https://www.youtube.com/embed/sSktwMA6k6U"
+                                title="Robot Car Demo"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                loading="lazy"
+                            ></iframe>
+                        </div>
+                        <p className="mt-2 text-neutral-400 text-sm">
+                            More details about each sensor and additional automation demos are coming soon.
+                        </p>
+                    </div>
+
                     {/* Gallery */}
                     <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
                         <h3 className="text-xl font-semibold mb-2">Gallery</h3>
@@ -108,7 +126,7 @@ export default function RobotCarProject() {
                         <h3 className="text-xl font-semibold mb-2">Links</h3>
                         <ul className="space-y-2">
                             <li><a href="https://github.com/axeboyrocks/Robot_Car" className="text-blue-400 hover:text-blue-300 transition">GitHub Repository</a></li>
-                            <li><a href="#" className="text-blue-400 hover:text-blue-300 transition">Demo Video</a></li>
+                            <li><a href="https://youtu.be/sSktwMA6k6U" className="text-blue-400 hover:text-blue-300 transition">Demo Video</a></li>
                         </ul>
                     </div>
                 </aside>
