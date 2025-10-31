@@ -31,7 +31,7 @@ export default function NetworkingLabProject() {
 
 
                 <p className="mt-3 text-neutral-300 max-w-3xl">
-                    Labs and configurations will be published here soon—once the Packet Tracer
+                    Labs and configurations will be published here soon, once the Packet Tracer
                     topologies and the physical rack build Daman is working on are fully
                     tested and documented. Expect VLAN designs, OSPF area layouts, HSRP failover
                     demos, DHCP scopes, and monitoring dashboards.
@@ -93,7 +93,7 @@ export default function NetworkingLabProject() {
                             <h3 className="text-xl font-semibold mb-2">Notes</h3>
                             <p className="text-neutral-300 mb-4">
                                 If you want a specific scenario (e.g., OSPF NSSA vs stub, dual‑WAN, QoS),
-                                suggest it here — it goes straight to my inbox.
+                                suggest it here, and it goes straight to my inbox.
                             </p>
                             <SuggestForm />
                         </div>

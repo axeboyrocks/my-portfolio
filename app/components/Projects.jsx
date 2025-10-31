@@ -57,7 +57,7 @@ export default function Projects() {
                             </h3>
 
                             <p>
-                                Home lab with VLANs, OSPF, HSRP, DHCP, and monitoring—configs and diagrams.
+                                Home lab with VLANs, OSPF, HSRP, DHCP, and monitoring, plus configs and diagrams.
                             </p>
                         </CardContent>
                     </Card>
