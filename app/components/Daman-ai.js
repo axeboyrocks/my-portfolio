@@ -84,17 +84,17 @@ export default function DamanAI() {
     }
 
     return (
-        <div className="w-full mx-auto max-w-3xl rounded-2xl border shadow-sm bg-white/90 dark:bg-zinc-900/70 backdrop-blur p-6">
+        <div className="w-full mx-auto max-w-3xl rounded-2xl border border-zinc-800/70 shadow-sm bg-neutral-900/90 text-neutral-100 backdrop-blur p-6">
             <h3 className="text-2xl md:text-3xl font-semibold text-center mb-2">
                 Wanna know more about me?
             </h3>
-            <p className="text-center text-sm md:text-base text-zinc-600 dark:text-zinc-300 mb-4">
+            <p className="text-center text-sm md:text-base text-neutral-300 mb-4">
                 Give it a try, and ask Daman’s self-made AI agent below.
             </p>
 
             <div
                 ref={listRef}
-                className="h-72 overflow-y-auto pr-1 rounded-xl border bg-white/60 dark:bg-zinc-900/60 p-4 space-y-3 flex flex-col"
+                className="h-72 overflow-y-auto pr-1 rounded-xl border border-zinc-800/60 bg-neutral-900 p-4 space-y-3 flex flex-col"
                 aria-live="polite"
             >
                 {messages.map((m, i) => (
@@ -102,8 +102,8 @@ export default function DamanAI() {
                         key={i}
                         className={
                             m.role === "assistant"
-                                ? "self-start max-w-[85%] rounded-2xl px-4 py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100"
-                                : "self-end max-w-[85%] rounded-2xl px-4 py-3 bg-blue-100 dark:bg-blue-900/40 text-blue-900 dark:text-blue-100"
+                                ? "self-start max-w-[85%] rounded-2xl px-4 py-3 bg-neutral-800 text-neutral-100"
+                                : "self-end max-w-[85%] rounded-2xl px-4 py-3 bg-neutral-700 text-neutral-100"
                         }
                     >
                         <p className="whitespace-pre-wrap leading-relaxed text-sm md:text-[15px]">
@@ -112,7 +112,7 @@ export default function DamanAI() {
                     </div>
                 ))}
                 {loading && (
-                    <div className="self-start max-w-[85%] rounded-2xl px-4 py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100">
+                    <div className="self-start max-w-[85%] rounded-2xl px-4 py-3 bg-neutral-800 text-neutral-200">
                         <p className="animate-pulse">Thinking…</p>
                     </div>
                 )}
@@ -120,7 +120,7 @@ export default function DamanAI() {
 
             <div className="mt-4 flex gap-2">
                 <textarea
-                    className="flex-1 resize-none h-12 md:h-14 rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-zinc-950"
+                    className="flex-1 resize-none h-12 md:h-14 rounded-xl border border-zinc-700/80 bg-neutral-900 text-neutral-100 placeholder:text-neutral-500 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Ask about Daman’s skills, certs, projects, experience…"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
@@ -143,7 +143,7 @@ export default function DamanAI() {
                 </button>
             </div>
 
-            <p className="text-xs text-center mt-3 text-zinc-500">
+            <p className="text-xs text-center mt-3 text-neutral-400">
                 Powered by {providerInfo} • Answers use a profile context that Daman control.
             </p>
         </div>
