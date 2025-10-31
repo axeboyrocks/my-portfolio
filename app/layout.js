@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Damanpreet Chauhan — Network & IT Portfolio",
+  title: "Damanpreet Chauhan, Network & IT Portfolio",
   description: "Portfolio, projects, and experience in networking, Intune, and automation.",
 };
 
