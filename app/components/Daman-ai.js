@@ -102,8 +102,8 @@ export default function DamanAI() {
                         key={i}
                         className={
                             m.role === "assistant"
-                                ? "self-start max-w-[85%] rounded-2xl px-4 py-3 bg-zinc-100 dark:bg-zinc-800"
-                                : "self-end max-w-[85%] rounded-2xl px-4 py-3 bg-blue-100 dark:bg-blue-900/40"
+                                ? "self-start max-w-[85%] rounded-2xl px-4 py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100"
+                                : "self-end max-w-[85%] rounded-2xl px-4 py-3 bg-blue-100 dark:bg-blue-900/40 text-blue-900 dark:text-blue-100"
                         }
                     >
                         <p className="whitespace-pre-wrap leading-relaxed text-sm md:text-[15px]">
@@ -112,7 +112,7 @@ export default function DamanAI() {
                     </div>
                 ))}
                 {loading && (
-                    <div className="self-start max-w-[85%] rounded-2xl px-4 py-3 bg-zinc-100 dark:bg-zinc-800">
+                    <div className="self-start max-w-[85%] rounded-2xl px-4 py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100">
                         <p className="animate-pulse">Thinking…</p>
                     </div>
                 )}
