@@ -84,7 +84,7 @@ export default function DamanAI() {
     }
 
     return (
-        <div className="w-full mx-auto max-w-3xl rounded-2xl border shadow-sm bg-white/90 dark:bg-zinc-900/70 backdrop-blur p-6">
+    <div className="w-full mx-auto max-w-3xl rounded-2xl border shadow-sm bg-white/90 dark:bg-zinc-900/70 backdrop-blur p-6 text-black dark:text-white">
             <h3 className="text-2xl md:text-3xl font-semibold text-center mb-2">
                 Wanna know more about me?
             </h3>
