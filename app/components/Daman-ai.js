@@ -83,6 +83,92 @@ export default function DamanAI() {
         ]);
     }
 
+    // ---- Chat log sending utilities ----
+    const [sendingLog, setSendingLog] = useState(false);
+    const [sendStatus, setSendStatus] = useState("");
+    const sentRef = useRef(false); // avoid duplicate sends
+
+    const MAX_BYTES = 50 * 1024; // 50 KB
+
+    function bytesOf(obj) {
+        try {
+            const s = typeof obj === "string" ? obj : JSON.stringify(obj);
+            return new TextEncoder().encode(s).length;
+        } catch (e) {
+            return Infinity;
+        }
+    }
+
+    async function sendChatLog(includeIP, useBeacon = false) {
+        if (sendingLog || sentRef.current) return;
+
+        const payload = { messages, includeIP: !!includeIP };
+        const size = bytesOf(payload.messages);
+        if (size > MAX_BYTES) {
+            setSendStatus("Chat log too large to send (limit 50 KB)");
+            return;
+        }
+
+        // Confirm with user when including IP
+        if (includeIP) {
+            const ok = window.confirm("This will include your public IP address in the emailed log. Do you consent?");
+            if (!ok) return;
+        } else {
+            const ok2 = window.confirm("Send chat log without your IP address?");
+            if (!ok2) return;
+        }
+
+        setSendingLog(true);
+        setSendStatus("");
+
+        try {
+            if (useBeacon && navigator && navigator.sendBeacon) {
+                // sendBeacon expects a Blob/ArrayBufferView
+                const blob = new Blob([JSON.stringify(payload)], { type: "application/json" });
+                navigator.sendBeacon("/api/chat-log", blob);
+                sentRef.current = true;
+                setSendStatus("Sent (via beacon)");
+            } else {
+                const res = await fetch("/api/chat-log", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload),
+                });
+                const json = await res.json().catch(() => ({}));
+                if (!res.ok || !json.ok) {
+                    throw new Error(json.error || `HTTP ${res.status}`);
+                }
+                sentRef.current = true;
+                setSendStatus("Sent successfully");
+            }
+        } catch (e) {
+            console.error("sendChatLog error:", e);
+            setSendStatus("Failed to send: " + (e?.message || "Unknown"));
+        } finally {
+            setSendingLog(false);
+        }
+    }
+
+    // Fallback: when user closes tab without choosing, send without IP using sendBeacon (best-effort)
+    useEffect(() => {
+        const onBeforeUnload = () => {
+            if (sentRef.current) return;
+            try {
+                const payload = { messages, includeIP: false };
+                const size = bytesOf(payload.messages);
+                if (size <= MAX_BYTES && navigator && navigator.sendBeacon) {
+                    const blob = new Blob([JSON.stringify(payload)], { type: "application/json" });
+                    navigator.sendBeacon("/api/chat-log", blob);
+                    sentRef.current = true;
+                }
+            } catch (e) {
+                // ignore
+            }
+        };
+        window.addEventListener("beforeunload", onBeforeUnload);
+        return () => window.removeEventListener("beforeunload", onBeforeUnload);
+    }, [messages]);
+
     return (
     <div className="w-full mx-auto max-w-3xl rounded-2xl border shadow-sm bg-white/90 dark:bg-zinc-900/70 backdrop-blur p-6 text-black dark:text-white">
             <h3 className="text-2xl md:text-3xl font-semibold text-center mb-2">
@@ -142,6 +228,31 @@ export default function DamanAI() {
                     Reset
                 </button>
             </div>
+
+            {/* Chat log send controls */}
+            <div className="mt-3 flex flex-col sm:flex-row gap-2 justify-center">
+                <button
+                    onClick={() => sendChatLog(true)}
+                    disabled={sendingLog || messages.length <= 1}
+                    className="px-4 py-2 rounded-lg bg-red-600 text-white hover:bg-red-700 disabled:opacity-60"
+                    title="Include your public IP address in the emailed log"
+                >
+                    {sendingLog ? "Sending…" : "Send logs with your public IP address"}
+                </button>
+
+                <button
+                    onClick={() => sendChatLog(false)}
+                    disabled={sendingLog || messages.length <= 1}
+                    className="px-4 py-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-60"
+                    title="Send logs without including IP"
+                >
+                    {sendingLog ? "Sending…" : "Send without IP address"}
+                </button>
+            </div>
+
+            {sendStatus && (
+                <p className="text-sm text-center mt-2 text-neutral-500">{sendStatus}</p>
+            )}
 
             <p className="text-xs text-center mt-3 text-zinc-500">
                 Powered by {providerInfo} • Answers use a profile context that Daman control.
