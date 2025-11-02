@@ -89,7 +89,7 @@ export default function DamanAI() {
                 Wanna know more about me?
             </h3>
             <p className="text-center text-sm md:text-base text-zinc-600 dark:text-zinc-300 mb-4">
-                Give it a try — ask Daman’s self-made AI agent below.
+                Give it a try, ask Daman’s self-made AI agent below.
             </p>
 
             <div

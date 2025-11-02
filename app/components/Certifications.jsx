@@ -18,7 +18,7 @@ export default function Certifications() {
                         >
                             Cisco <strong>CCNA</strong>
                         </a>{" "}
-                        — <span className="text-neutral-400">Jun 2025</span>
+                        , <span className="text-neutral-400">Jun 2025</span>
                     </span>
                 </li>
 
@@ -37,7 +37,7 @@ export default function Certifications() {
                         >
                             CompTIA <strong>A+</strong>
                         </a>{" "}
-                        — <span className="text-neutral-400">Jul&nbsp;2024</span>
+                        , <span className="text-neutral-400">Jul&nbsp;2024</span>
                     </span>
                 </li>
 
@@ -57,7 +57,7 @@ export default function Certifications() {
                             HP Commercial &amp; Consumer Desktops/Workstations/Notebooks Service Qualification
                             (Release 6.0 / 2022)
                         </a>{" "}
-                        — <span className="text-neutral-400">Jun&nbsp;2024</span>
+                        , <span className="text-neutral-400">Jun&nbsp;2024</span>
                     </span>
                 </li>
             </ul>
