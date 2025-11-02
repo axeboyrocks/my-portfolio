@@ -77,6 +77,14 @@ export default function Hero() {
                     {done ? <Cursor faint /> : stage === 2 && <Cursor />}
                 </p>
             </div>
+
+            <a
+                href="/Damanpreet_Chauhan_Resume.pdf"
+                download
+                className="mt-6 px-6 py-3 bg-white text-black text-lg font-semibold rounded-full shadow-md hover:bg-neutral-200 transition-all duration-300"
+            >
+                Download Resume
+            </a>
         </section>
     );
 }
