@@ -27,5 +27,5 @@ GOALS: Keep building in networking/cloud (targeting Azure Solutions Architect ne
 
 PORTFOLIO: Multi-tier Packet Tracer lab; Next.js + Tailwind site; Arduino RC car.
 
-CONTACT: Email: damanpreetc30@gmail.com | LinkedIn: https://www.linkedin.com/in/chauhdam/ | Phone: +1-647-467-9440
+CONTACT: Email: daman.c.tech@gmail.com | LinkedIn: https://www.linkedin.com/in/chauhdam/
 `;
