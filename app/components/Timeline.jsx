@@ -11,7 +11,7 @@ export default function Timeline() {
                     <p>Cisco <strong>CCNA</strong>.</p>
                 </div>
 
-                {/* 2025, Infrastructure Ontario (dates updated) */}
+                {/* 2025 — Infrastructure Ontario (dates updated) */}
                 <div>
                     <h3 className="text-2xl font-semibold">May 2024 – Mar 2025</h3>
                     <p className="text-neutral-400">Infrastructure Ontario, Deskside Support Analyst (L2/L3), Toronto, ON</p>
