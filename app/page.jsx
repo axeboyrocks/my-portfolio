@@ -61,11 +61,11 @@ export default function Portfolio() {
         <DamanAI />
       </section>
 
-      <TechStack />
-      <Projects />
-      <Timeline />
-      <Certifications />
-      <Contact />
+  <Certifications />
+  <Projects />
+  <Timeline />
+  <TechStack />
+  <Contact />
 
       <footer className="py-10 text-center text-sm text-neutral-500">
         © 2025 Damanpreet Chauhan. Built with ❤️, Next.js and Framer Motion.
